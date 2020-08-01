@@ -23,7 +23,7 @@ int main()
             long count = 0;
             while(s[i] == '1')
                 count++, i++;
-            res +=(count*(count+1))/2;
+            res +=(count*(count+1))/2;//because let count =4,So ans=4+3+2+1 i.e single one are 4 double 1 are 3 triple 1 are 2 and 4thime 1 are 1 in count.
         }
         cout<<res%1000000007;
 
