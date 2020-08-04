@@ -18,6 +18,11 @@ Example 3:
 Input: text1 = "abc", text2 = "def"
 Output: 0
 Explanation: There is no such common subsequence, so the result is 0.*/
+//quetion similar to LCS(longest comman subsequence)---->>>>
+//1) Minimum insertion and deletion need to convert string a into b is insertion=b.size()-LCS and deletion=a.size()-LCS total a.size()+b.size()-2*LCS;
+//2) Longest palindrom subsequence (ex:string a="agbcba" so longest comman subsequence is "abcba") is equal to LCS between a and reverse of a
+//3) Minimum number of deletion in a string to make is palindrom is s.size()-(LCS between a and reverse of a)
+//4) sortest comman Supersequence(i.e. both string a anad b is prsent in ans string ex: a="acbcf" b="abcdaf" so ans="acbcdaf") isa.size()+b.size()-LCS
 //function is writtern
 int longestCommonSubsequence(string text1, string text2) {
        int dp[text1.size()+1][text2.size()+1];
