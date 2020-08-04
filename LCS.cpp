@@ -23,6 +23,9 @@ Explanation: There is no such common subsequence, so the result is 0.*/
 //2) Longest palindrom subsequence (ex:string a="agbcba" so longest comman subsequence is "abcba") is equal to LCS between a and reverse of a
 //3) Minimum number of deletion in a string to make is palindrom is s.size()-(LCS between a and reverse of a)
 //4) sortest comman Supersequence(i.e. both string a anad b is prsent in ans string ex: a="acbcf" b="abcdaf" so ans="acbcdaf") isa.size()+b.size()-LCS
+//5) longest repeating subsequence(ex:s="aabebcdd" so ans="abd" that is 3) in LCS code we consider a and b as string s only and in  if(text1[i-1]==text2[j-1]) we write
+   //if(a[i-1]==b[j-1]&&i!=j) and other part is same.
+
 //LCS function is writtern
 int longestCommonSubsequence(string text1, string text2) {
        int dp[text1.size()+1][text2.size()+1];
@@ -34,7 +37,7 @@ int longestCommonSubsequence(string text1, string text2) {
        }
        for(int i=1;i<=text1.size();i++){
           for(int j=1;j<=text2.size();j++){
-            if(text1[i-1]==text2[j-1])
+            if(text1[i-1]==text2[j-1]) //if(a[i-1]==b[j-1]&&i!=j) in case of longest repeating subsequence
                 dp[i][j]=1+dp[i-1][j-1];
              else
                  dp[i][j]=max(dp[i-1][j],dp[i][j-1]);
