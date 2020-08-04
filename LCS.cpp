@@ -21,7 +21,7 @@ Explanation: There is no such common subsequence, so the result is 0.*/
 //quetion similar to LCS(longest comman subsequence)---->>>>
 //1) Minimum insertion and deletion need to convert string a into b is insertion=b.size()-LCS and deletion=a.size()-LCS total a.size()+b.size()-2*LCS;
 //2) Longest palindrom subsequence (ex:string a="agbcba" so longest comman subsequence is "abcba") is equal to LCS between a and reverse of a
-//3) Minimum number of deletion in a string to make is palindrom is s.size()-(LCS between a and reverse of a)
+//3) Minimum number of deletion(or insertion) in a string to make is palindrom is s.size()-(LCS between a and reverse of a)
 //4) sortest comman Supersequence(i.e. both string a anad b is prsent in ans string ex: a="acbcf" b="abcdaf" so ans="acbcdaf") isa.size()+b.size()-LCS
 //5) longest repeating subsequence(ex:s="aabebcdd" so ans="abd" that is 3) in LCS code we consider a and b as string s only and in  if(text1[i-1]==text2[j-1]) we write
    //if(a[i-1]==b[j-1]&&i!=j) and other part is same.
