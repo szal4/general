@@ -1,8 +1,12 @@
+//link1 for understanding algorithm link2 for code
+//https://www.youtube.com/watch?v=XB4MIexjvY0
+//https://www.youtube.com/watch?v=wQIb1NonMIM&t=299s
+
 #include <iostream>
 #include<bits/stdc++.h>
 using namespace std;
 void sortest_path(vector<vector<int>> v,int n){
-    vector<int> d(n,INT_MAX); //distance array this will keep on updating
+    vector<int> d(n,INT_MAX); //distance array(distance of all node from 0) this will keep on updating
     d[0]=0;
     vector<int> visited(n,false);
     int mn=0,mnv;
@@ -22,7 +26,7 @@ void sortest_path(vector<vector<int>> v,int n){
            }
        }
     }
-    
+    //to print shortest distance of all node from 0
     for(int i=0;i<n;i++){
         cout<<i<<"-"<<d[i]<<endl;
     }
