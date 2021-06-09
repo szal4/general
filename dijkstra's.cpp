@@ -8,7 +8,7 @@ using namespace std;
 void sortest_path(vector<vector<int>> v,int n){
     vector<int> d(n,INT_MAX); //distance array(distance of all node from 0) this will keep on updating
     d[0]=0;
-    vector<int> visited(n,false);
+    vector<bool> visited(n,false);
     int mn=0,mnv;
     
     for(int ii=0;ii<n-1;ii++){
